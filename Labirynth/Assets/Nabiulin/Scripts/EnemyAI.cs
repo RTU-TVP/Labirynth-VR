@@ -37,7 +37,7 @@ public class EnemyAI : MonoBehaviour
         Stun
     }
 
-    private EnemyState currentState;
+    [SerializeField] private EnemyState currentState;
     private Vector3 patrolPoint;
 
     [SerializeField]
