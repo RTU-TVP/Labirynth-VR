@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 [AddComponentMenu("Nokobot/Modern Guns/Simple Shoot")]
 public class SimpleShoot : MonoBehaviour
@@ -23,7 +24,13 @@ public class SimpleShoot : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _fire;
+    [SerializeField] private AudioClip _reload;
+    [SerializeField] private AudioClip _nonFire;
 
+    [Header("Magazine")]
+    [SerializeField] private Magazine _magazine;
+    [SerializeField] private XRBaseInteractor _socketInteractor;
+    [SerializeField] private bool _hasSlide = true;
 
     void Start()
     {
@@ -32,11 +39,38 @@ public class SimpleShoot : MonoBehaviour
 
         if (gunAnimator == null)
             gunAnimator = GetComponentInChildren<Animator>();
+
+        _socketInteractor.onSelectEntered.AddListener(AddMagazine);
+        _socketInteractor.onSelectExited.AddListener(ReleaseMagazine);
+    }
+
+
+    private void AddMagazine(XRBaseInteractable interactable)
+    {
+        _magazine = interactable.GetComponent<Magazine>();
+        _audioSource.PlayOneShot(_reload);
+
+    }
+
+    public void Slide() { 
+        _hasSlide = true;
+        _audioSource.PlayOneShot(_reload);
+    }
+
+    private void ReleaseMagazine(XRBaseInteractable interactable)
+    {
+        _magazine = null;
+        _hasSlide = false;
+        _audioSource.PlayOneShot(_reload);
     }
 
     public void PullTheTrigger()
     {
-        gunAnimator.SetTrigger("Fire");
+        if (_magazine && _magazine.bulletsCount > 0 && _hasSlide)
+        {
+            gunAnimator.SetTrigger("Fire");
+        }
+        else { _audioSource.PlayOneShot(_nonFire); }
     }
 
 
@@ -44,6 +78,7 @@ public class SimpleShoot : MonoBehaviour
     void Shoot()
     {
         _audioSource.PlayOneShot(_fire);
+        _magazine.bulletsCount--;
 
         if (muzzleFlashPrefab)
         {
