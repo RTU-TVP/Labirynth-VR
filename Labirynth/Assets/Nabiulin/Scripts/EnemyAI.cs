@@ -28,6 +28,9 @@ public class EnemyAI : MonoBehaviour
     private float attackCooldown = 5f;
     private float attackCooldownTimer = 0f;
 
+    [Header("Audio")]
+    [SerializeField] AudioSource _audioSource;
+    [SerializeField] AudioClip _roar;
     private enum EnemyState
     {
         Patroling,
