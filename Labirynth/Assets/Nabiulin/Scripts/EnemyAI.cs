@@ -30,9 +30,10 @@ public class EnemyAI : MonoBehaviour
 
     [Header("Audio")]
     [SerializeField] AudioSource _audioSource;
-    [SerializeField] GameObject _roar;
     [SerializeField] AudioClip _footstep;
     [SerializeField] AudioClip _run;
+    [SerializeField] GameObject _roar;
+    [SerializeField] GameObject chaseTheme;
 
     private bool isRoar = false;
     private enum EnemyState
@@ -51,7 +52,6 @@ public class EnemyAI : MonoBehaviour
     private float patrolTimer = 15f;
     private float timer;
 
-    private bool inRadius;
 
     void Start()
     {
@@ -62,14 +62,13 @@ public class EnemyAI : MonoBehaviour
         FindRandomPatrolPoint();
         _roar.gameObject.SetActive(false);
         _animationController = GetComponent<EnemyAnimationController>();
+        chaseTheme.SetActive(false);
     }
 
 
     void Update()
     {
         float distance = Vector3.Distance(player.position, transform.position);
-
-        player.GetComponent<PlayerSound>().PlayHeartBeat(inRadius);
 
         if (stunTimer > 0f)
         {
@@ -103,18 +102,18 @@ public class EnemyAI : MonoBehaviour
 
         if (distance <= attackRange)
         {
+            chaseTheme.SetActive(true);
             currentState = EnemyState.Attack;
-            inRadius = true;
         }
         else if (distance <= lookRadius)
         {
+            chaseTheme.SetActive(true);
             currentState = EnemyState.Chase;
-            inRadius = true;
         }
         else
         {
+            chaseTheme.SetActive(false);
             currentState = EnemyState.Patroling;
-            inRadius = false;
         }
 
     }
