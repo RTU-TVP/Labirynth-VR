@@ -10,15 +10,49 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] AudioClip _death;
     [SerializeField] GameObject _heartBeat;
 
+    [SerializeField]
+    float range;
+    bool inRange;
+
+    [SerializeField]
+    Transform enemy;
+
     private void Start()
     {
         _source = GetComponent<AudioSource>();
         _heartBeat.gameObject.SetActive(false);
+
+        if(enemy == null)
+        {
+            enemy = GameObject.FindWithTag("Monster").transform;
+        }
+        else
+        {
+            return;
+        }
+
+        inRange = true;
     }
 
-    public void PlayHeartBeat(bool isLookRadius)
+    private void Update()
     {
-        if (isLookRadius)
+        float distance = Vector3.Distance(enemy.position, transform.position);
+
+        if (distance <= range)
+        {
+            inRange = true;
+        }
+        else
+        {
+            inRange = false;
+        }
+
+        PlayHeartBeat(inRange);
+    }
+
+    public void PlayHeartBeat(bool inLookRadius)
+    {
+        if (inLookRadius)
         {
             _heartBeat.gameObject.SetActive(true);
         }
@@ -42,5 +76,11 @@ public class PlayerSound : MonoBehaviour
         {
             _source.PlayOneShot(_death);
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, range);
     }
 }
