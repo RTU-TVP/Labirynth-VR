@@ -32,6 +32,7 @@ public class ElectricTorchOnOff : MonoBehaviour
 	private bool _flashLightOn = false;
 	[SerializeField] float _lightTime = 0.05f;
 
+	public void OnOffLight() { _flashLightOn = !_flashLightOn; }
 
 	private void Awake()
     {
