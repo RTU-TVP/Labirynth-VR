@@ -1187,11 +1187,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1186511902917150248, guid: e469dec7f8f29414e9996691d9bf8a5a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0240002
+      value: 1.34
       objectReference: {fileID: 0}
     - target: {fileID: 1186511902917150248, guid: e469dec7f8f29414e9996691d9bf8a5a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 74.155
+      value: 74.361
       objectReference: {fileID: 0}
     - target: {fileID: 1186511902917150248, guid: e469dec7f8f29414e9996691d9bf8a5a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3343,6 +3343,44 @@ CapsuleCollider:
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &880139589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880139571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919e39492806b334982b6b84c90dd927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 0}
+  m_TurnSpeed: 60
+  m_LeftHandTurnAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Left Hand Turn
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: cf1247fb-0df0-4334-886a-3638d6bc98cf
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  m_RightHandTurnAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Right Hand Turn
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: ecc7ce9f-c88c-44ee-bbe5-f6d2250bc900
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -6493913391331992944, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1001 &1072896621
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3684,63 +3722,6 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!1001 &1280348239
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
-      propertyPath: m_Name
-      value: XR Device Simulator
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
 --- !u!1 &1383545123
 GameObject:
   m_ObjectHideFlags: 0
@@ -4590,6 +4571,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4376758597305678734, guid: d68d2d5967a164f4face98ef237a9f95, type: 3}
+      propertyPath: m_RightHandMoveAction.m_UseReference
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4423443471041401774, guid: d68d2d5967a164f4face98ef237a9f95, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -4756,6 +4741,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5763401144854616601, guid: d68d2d5967a164f4face98ef237a9f95, type: 3}
       insertIndex: -1
       addedObject: {fileID: 880139582}
+    - targetCorrespondingSourceObject: {fileID: 5763401144854616601, guid: d68d2d5967a164f4face98ef237a9f95, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 880139589}
     - targetCorrespondingSourceObject: {fileID: 7055040201856262478, guid: d68d2d5967a164f4face98ef237a9f95, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1266692209}
@@ -4938,7 +4926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 11c5769b733014f458c6c86a10e5613f, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 908d3b9414e65e14797c3e8d84943d4b, type: 2}
   isGlobal: 1
   blendDistance: 0
   weight: 1
@@ -5474,4 +5462,3 @@ SceneRoots:
   - {fileID: 1113793755}
   - {fileID: 314548890}
   - {fileID: 1818970264}
-  - {fileID: 1280348239}
