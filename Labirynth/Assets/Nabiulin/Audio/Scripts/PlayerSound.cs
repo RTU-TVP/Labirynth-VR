@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.PostProcessing;
 
 public class PlayerSound : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] AudioClip _footsteps;
     [SerializeField] AudioClip _death;
     [SerializeField] GameObject _heartBeat;
+
+    [Header("Post-Proccess")]
+    [SerializeField] GameObject _idleVolume;
+    [SerializeField] GameObject _panicVolume;
 
     [SerializeField] InputActionReference inputMove;
 
@@ -35,6 +40,9 @@ public class PlayerSound : MonoBehaviour
         }
 
         inRange = true;
+
+        _idleVolume.gameObject.SetActive(true);
+        _panicVolume.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -63,10 +71,14 @@ public class PlayerSound : MonoBehaviour
         if (inLookRadius)
         {
             _heartBeat.gameObject.SetActive(true);
+            _idleVolume.gameObject.SetActive(false);
+            _panicVolume.gameObject.SetActive(true);
         }
         else
         {
             _heartBeat.gameObject.SetActive(false);
+            _idleVolume.gameObject.SetActive(true);
+            _panicVolume.gameObject.SetActive(false);
         }
     }
 
