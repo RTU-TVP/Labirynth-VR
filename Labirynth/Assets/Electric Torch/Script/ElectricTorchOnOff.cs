@@ -32,7 +32,10 @@ public class ElectricTorchOnOff : MonoBehaviour
 	private bool _flashLightOn = false;
 	[SerializeField] float _lightTime = 0.05f;
 
-	public void OnOffLight() { _flashLightOn = !_flashLightOn; }
+
+	public void LightONTrue() { _flashLightOn = true;  }
+	public void LightOnOff() { _flashLightOn = !_flashLightOn;  }
+	public void LightONFalse() { _flashLightOn = false;  }
 
 	private void Awake()
     {
@@ -71,19 +74,6 @@ public class ElectricTorchOnOff : MonoBehaviour
         }
 	}
 
-	void InputKey()
-    {
-		if (Input.GetKeyDown(_kCode) && _flashLightOn == true)
-		{
-			_flashLightOn = false;
-
-		}
-		else if (Input.GetKeyDown(_kCode) && _flashLightOn == false)
-		{
-			_flashLightOn = true;
-
-		}
-	}
 
 	void NoBatteryLight()
     {
@@ -97,7 +87,6 @@ public class ElectricTorchOnOff : MonoBehaviour
 			GetComponent<Light>().intensity = 0.0f;
 			_emissionMaterialFade.OffEmission();
 		}
-		InputKey();
 	}
 
 	void WithBatteryLight()
@@ -128,7 +117,5 @@ public class ElectricTorchOnOff : MonoBehaviour
 				intensityLight = _batteryPower.PowerIntensityLight;
 			}
 		}
-
-		InputKey();
 	}
 }
