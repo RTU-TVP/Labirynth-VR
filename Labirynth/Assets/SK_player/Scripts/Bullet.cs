@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.tag == "Monster") {
             //Stan monster
-            collision.gameObject.GetComponent<EnemyAI>().HitStun(5f);
+            collision.gameObject.GetComponent<EnemyAI>().HitStun(10f);
             Destroy(gameObject); 
         }
     }
