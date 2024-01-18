@@ -30,7 +30,12 @@ public class EnemyAI : MonoBehaviour
 
     [Header("Audio")]
     [SerializeField] AudioSource _audioSource;
-    [SerializeField] AudioClip _roar;
+    [SerializeField] AudioClip _footstep;
+    [SerializeField] AudioClip _run;
+    [SerializeField] GameObject _roar;
+    [SerializeField] GameObject chaseTheme;
+
+    private bool isRoar = false;
     private enum EnemyState
     {
         Patroling,
@@ -47,13 +52,17 @@ public class EnemyAI : MonoBehaviour
     private float patrolTimer = 15f;
     private float timer;
 
+
     void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
+        _audioSource = GetComponent<AudioSource>();
         agent = GetComponent<NavMeshAgent>();
         currentState = EnemyState.Patroling;
         FindRandomPatrolPoint();
+        _roar.gameObject.SetActive(false);
         _animationController = GetComponent<EnemyAnimationController>();
+        chaseTheme.SetActive(false);
     }
 
 
@@ -93,17 +102,28 @@ public class EnemyAI : MonoBehaviour
 
         if (distance <= attackRange)
         {
+            chaseTheme.SetActive(true);
             currentState = EnemyState.Attack;
         }
         else if (distance <= lookRadius)
         {
+            chaseTheme.SetActive(true);
             currentState = EnemyState.Chase;
         }
         else
         {
+            chaseTheme.SetActive(false);
             currentState = EnemyState.Patroling;
         }
 
+    }
+
+    private void PlayAudio(AudioClip clip)
+    {
+        if (!_audioSource.isPlaying)
+        {
+            _audioSource.PlayOneShot(clip);
+        }
     }
 
     private void Stun()
@@ -117,6 +137,8 @@ public class EnemyAI : MonoBehaviour
             FindRandomPatrolPoint();
             agent.isStopped = false;
         }
+
+        isRoar = false;
     }
 
     private void Patrol()
@@ -136,9 +158,14 @@ public class EnemyAI : MonoBehaviour
             FindRandomPatrolPoint();
         }
 
+        _roar.gameObject.SetActive(false);
+
         FaceToTargetSmooth(agent.velocity.normalized);
 
         _animationController.WalkAnim();
+
+        PlayAudio(_footstep); 
+        isRoar = false;
     }
 
     private void Chase()
@@ -149,6 +176,13 @@ public class EnemyAI : MonoBehaviour
         agent.speed = 6;
 
         FaceToTargetSmooth(agent.velocity.normalized);
+
+        if(!_audioSource.isPlaying && !isRoar)
+        {
+            _roar.gameObject.SetActive(true);
+            isRoar = true;
+        }
+        PlayAudio(_run);
     }
 
     private void Attack()
@@ -163,6 +197,9 @@ public class EnemyAI : MonoBehaviour
             currentState = EnemyState.AttackCoolDown;
             attackCooldownTimer = attackCooldown;
         }
+
+        isRoar = false;
+        PlayAudio(_run);
     }
 
     private void FindRandomPatrolPoint()
