@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerSound : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] AudioClip _footsteps;
     [SerializeField] AudioClip _death;
     [SerializeField] GameObject _heartBeat;
+
+    [SerializeField] InputActionReference inputMove;
 
     [SerializeField]
     float range;
@@ -48,6 +51,11 @@ public class PlayerSound : MonoBehaviour
         }
 
         PlayHeartBeat(inRange);
+
+        if (inputMove.action.ReadValue<Vector2>() != Vector2.zero)
+        {
+            FootstepsAudio();
+        }
     }
 
     public void PlayHeartBeat(bool inLookRadius)
