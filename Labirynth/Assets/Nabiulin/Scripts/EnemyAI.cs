@@ -90,6 +90,7 @@ public class EnemyAI : MonoBehaviour
                 break;
             case EnemyState.Attack:
                 Attack();
+                agent.speed = 1;
                 break;
             case EnemyState.AttackCoolDown:
                 _animationController.IdleAnim();
@@ -163,7 +164,7 @@ public class EnemyAI : MonoBehaviour
         FaceToTargetSmooth(agent.velocity.normalized);
 
         _animationController.WalkAnim();
-
+        agent.speed = 2.5f;
         PlayAudio(_footstep); 
         isRoar = false;
     }
@@ -173,7 +174,7 @@ public class EnemyAI : MonoBehaviour
         agent.SetDestination(player.position);
         _animationController.RunAnim();
 
-        agent.speed = 6;
+        agent.speed = 5;
 
         FaceToTargetSmooth(agent.velocity.normalized);
 
