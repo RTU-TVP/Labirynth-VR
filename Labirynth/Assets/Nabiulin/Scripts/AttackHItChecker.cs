@@ -9,6 +9,7 @@ public class AttackHItChecker : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("I'm Attack YOU!!!");
+            other.gameObject.GetComponent<PlayerSound>().PlayDeathAudio();
         }
     }
 }
