@@ -13,7 +13,7 @@ public class PlayerSound : MonoBehaviour
     [SerializeField] GameObject _heartBeat;
 
     [Header("Post-Proccess")]
-    [SerializeField] GameObject _idleVolume;
+    //[SerializeField] GameObject _idleVolume;
     [SerializeField] GameObject _panicVolume;
 
     [SerializeField] InputActionReference inputMove;
@@ -41,7 +41,7 @@ public class PlayerSound : MonoBehaviour
 
         inRange = true;
 
-        _idleVolume.gameObject.SetActive(true);
+        //_idleVolume.gameObject.SetActive(true);
         _panicVolume.gameObject.SetActive(false);
     }
 
@@ -71,13 +71,13 @@ public class PlayerSound : MonoBehaviour
         if (inLookRadius)
         {
             _heartBeat.gameObject.SetActive(true);
-            _idleVolume.gameObject.SetActive(false);
+            //_idleVolume.gameObject.SetActive(false);
             _panicVolume.gameObject.SetActive(true);
         }
         else
         {
             _heartBeat.gameObject.SetActive(false);
-            _idleVolume.gameObject.SetActive(true);
+            //_idleVolume.gameObject.SetActive(true);
             _panicVolume.gameObject.SetActive(false);
         }
     }
