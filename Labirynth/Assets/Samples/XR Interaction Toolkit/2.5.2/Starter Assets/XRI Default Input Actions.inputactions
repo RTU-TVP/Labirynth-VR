@@ -2600,6 +2600,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "XR GameSystem",
+            "id": "14e5d059-a7b1-47a1-a944-f71d310c0609",
+            "actions": [
+                {
+                    "name": "Pause",
+                    "type": "Value",
+                    "id": "e87f82ec-f241-458d-b38a-347c5f487cb5",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c7194185-0925-4511-be07-6baca5fa022a",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

@@ -30,7 +30,7 @@ public class SimpleShoot : MonoBehaviour
     [Header("Magazine")]
     [SerializeField] private Magazine _magazine;
     [SerializeField] private XRBaseInteractor _socketInteractor;
-    [SerializeField] private bool _hasSlide = true;
+    //[SerializeField] private bool _hasSlide = true;
 
     void Start()
     {
@@ -53,20 +53,20 @@ public class SimpleShoot : MonoBehaviour
     }
 
     public void Slide() { 
-        _hasSlide = true;
+        //_hasSlide = true;
         _audioSource.PlayOneShot(_reload);
     }
 
     private void ReleaseMagazine(XRBaseInteractable interactable)
     {
         _magazine = null;
-        _hasSlide = false;
+        //_hasSlide = false;
         _audioSource.PlayOneShot(_reload);
     }
 
     public void PullTheTrigger()
     {
-        if (_magazine && _magazine.bulletsCount > 0 && _hasSlide)
+        if (_magazine && _magazine.bulletsCount > 0)// && _hasSlide)
         {
             gunAnimator.SetTrigger("Fire");
         }

@@ -7,6 +7,8 @@ TagManager:
   - Gun Magazine
   - Monster
   - Keycard
+  - FlashLight
+  - Gun
   layers:
   - Default
   - TransparentFX
@@ -17,8 +19,8 @@ TagManager:
   - Grabable
   - AdditionalGrabable
   - Interactor
-  - 
-  - 
+  - RayInteractor
+  - Process
   - 
   - 
   - 
@@ -43,4 +45,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ray
+    uniqueID: 1676927943
     locked: 0
