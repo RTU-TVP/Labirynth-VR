@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Gun Magazine
   - Monster
+  - Keycard
   layers:
   - Default
   - TransparentFX
