@@ -12439,6 +12439,107 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &573022664 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9049916244784767373, guid: 946c22096b3028f47b53e58fcf9ccefb, type: 3}
+  m_PrefabInstance: {fileID: 5959279633997350948}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &573022665
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573022664}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &573473089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49431,6 +49532,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3400635473246131472, guid: 946c22096b3028f47b53e58fcf9ccefb, type: 3}
+      propertyPath: _source
+      value: 
+      objectReference: {fileID: 573022665}
+    - target: {fileID: 3400635473246131472, guid: 946c22096b3028f47b53e58fcf9ccefb, type: 3}
+      propertyPath: _approvedClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 34ad476757128c34bb78d410b7465363, type: 3}
+    - target: {fileID: 3400635473246131472, guid: 946c22096b3028f47b53e58fcf9ccefb, type: 3}
+      propertyPath: _doorMoveClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1611bcb5a0f494045935e1bcc974dcd0, type: 3}
+    - target: {fileID: 3400635473246131472, guid: 946c22096b3028f47b53e58fcf9ccefb, type: 3}
+      propertyPath: _doorStopClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f61bb96484f994b4db0f44dd3aed6e1d, type: 3}
     - target: {fileID: 9049916244784767373, guid: 946c22096b3028f47b53e58fcf9ccefb, type: 3}
       propertyPath: m_Name
       value: DOOR
@@ -49438,7 +49555,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9049916244784767373, guid: 946c22096b3028f47b53e58fcf9ccefb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 573022665}
   m_SourcePrefab: {fileID: 100100000, guid: 946c22096b3028f47b53e58fcf9ccefb, type: 3}
 --- !u!1001 &7870288610796037459
 PrefabInstance:
