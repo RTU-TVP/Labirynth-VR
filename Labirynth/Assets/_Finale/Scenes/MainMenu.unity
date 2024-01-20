@@ -2103,6 +2103,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 491323599273719309, guid: 5c2d02ca63f7e674dbc2e54f12667941, type: 3}
+      propertyPath: m_Name
+      value: CardSlot
+      objectReference: {fileID: 0}
     - target: {fileID: 1407287652484827015, guid: 5c2d02ca63f7e674dbc2e54f12667941, type: 3}
       propertyPath: m_Name
       value: Player
