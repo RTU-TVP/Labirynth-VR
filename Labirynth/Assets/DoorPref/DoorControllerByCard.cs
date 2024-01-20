@@ -26,7 +26,7 @@ public class DoorControllerByCard : MonoBehaviour
 
     private void Start()
     {
-        doorClosed = door.transform.position.y;
+        if (doorClosed == 0) { doorClosed = door.transform.position.y; }
     }
 
     public IEnumerator DoorOpener() 
