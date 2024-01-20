@@ -15,6 +15,12 @@ public class DoorControllerByCard : MonoBehaviour
     [SerializeField] private float openTime;
     [SerializeField] private float openingTime;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource _source;
+    [SerializeField] private AudioClip _doorMoveClip;
+    [SerializeField] private AudioClip _doorStopClip;
+    [SerializeField] private AudioClip _approvedClip;
+
     bool _isOpening = false;
     public bool PlayerInTrigger;
 
@@ -29,7 +35,9 @@ public class DoorControllerByCard : MonoBehaviour
         {
             _isOpening = true;
             OpenDoor();
-            yield return new WaitForSeconds(openTime);
+            yield return new WaitForSeconds(openingTime);
+            _source.PlayOneShot(_doorStopClip);
+            yield return new WaitForSeconds(openTime- openingTime);
             while (true)
             {
                 if (PlayerInTrigger) { yield return new WaitForEndOfFrame(); }
@@ -40,6 +48,8 @@ public class DoorControllerByCard : MonoBehaviour
                     break;
                 }
             }
+            yield return new WaitForSeconds(openingTime);
+            _source.PlayOneShot(_doorStopClip);
             yield return null;
         }
     }
@@ -51,17 +61,20 @@ public class DoorControllerByCard : MonoBehaviour
             redLights[i].SetActive(!redLights[i].activeSelf);
             greenLights[i].SetActive(!greenLights[i].activeSelf);
         }
+        _source.PlayOneShot(_approvedClip);
     }
 
     private void OpenDoor()
     {
         door.transform.DOMoveY(doorOpened, openingTime);
         Lights();
+        _source.PlayOneShot(_doorMoveClip);
     }
     private void CloseDoor()
     {
         door.transform.DOMoveY(doorClosed, openingTime);
         Lights();
+        _source.PlayOneShot(_doorMoveClip);
     }
 
 }
