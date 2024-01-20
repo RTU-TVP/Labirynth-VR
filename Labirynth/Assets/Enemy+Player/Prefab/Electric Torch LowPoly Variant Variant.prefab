@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 839523580211889707, guid: e469dec7f8f29414e9996691d9bf8a5a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1186511902917150248, guid: e469dec7f8f29414e9996691d9bf8a5a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.352421
@@ -86,7 +90,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2357555805485511749, guid: e469dec7f8f29414e9996691d9bf8a5a, type: 3}
       propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: LightOnOff
+      value: OnOffLight
       objectReference: {fileID: 0}
     - target: {fileID: 2357555805485511749, guid: e469dec7f8f29414e9996691d9bf8a5a, type: 3}
       propertyPath: m_Deactivated.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -132,9 +136,21 @@ PrefabInstance:
       propertyPath: m_Deactivated.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5477155214715008921, guid: e469dec7f8f29414e9996691d9bf8a5a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646377126141469769, guid: e469dec7f8f29414e9996691d9bf8a5a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6907449088884318885, guid: e469dec7f8f29414e9996691d9bf8a5a, type: 3}
       propertyPath: m_Name
       value: Electric Torch LowPoly Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907449088884318885, guid: e469dec7f8f29414e9996691d9bf8a5a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

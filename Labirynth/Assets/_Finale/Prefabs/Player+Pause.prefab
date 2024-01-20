@@ -505,7 +505,7 @@ Transform:
   m_GameObject: {fileID: 1157029877412310612}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: 0.8649999, z: 0}
+  m_LocalPosition: {x: -0, y: 1.763, z: -0}
   m_LocalScale: {x: 2.7176993, y: 0.5033601, z: 0.9966402}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -523,9 +523,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2
+  m_Intensity: 1
   m_Range: 4
-  m_SpotAngle: 45
+  m_SpotAngle: 70.3
   m_InnerSpotAngle: 3
   m_CookieSize: 10
   m_Shadows:
@@ -4886,6 +4886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f41a83adf28b6694e89ed2ce4d89a812, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
 --- !u!1 &4185362019818264401
 GameObject:
   m_ObjectHideFlags: 0
@@ -5278,7 +5279,7 @@ GameObject:
   - component: {fileID: 8125211195556897956}
   - component: {fileID: 4890615686741364222}
   m_Layer: 0
-  m_Name: Magazine_Location (2)
+  m_Name: Card_Location
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5292,13 +5293,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5304939319991812265}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.12, y: -0.033, z: 0.0569}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6168051716980725855}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5439932329850543215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5418,7 +5419,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.5, y: 3, z: 2.3}
+  m_Size: {x: 2.3, y: 3, z: 3.5}
   m_Center: {x: -0.00012207031, y: 0, z: 0}
 --- !u!1 &5320743587497389276
 GameObject:
@@ -5496,6 +5497,7 @@ GameObject:
   - component: {fileID: 9188565539751719094}
   - component: {fileID: 6684919577497140937}
   - component: {fileID: 6710768384538109208}
+  - component: {fileID: 5585273827910465563}
   m_Layer: 0
   m_Name: Flashlight_Location
   m_TagString: Untagged
@@ -5550,9 +5552,9 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ElectricTorchOnOff, Assembly-CSharp
-        m_MethodName: LightONFalse
+      - m_Target: {fileID: 5585273827910465563}
+        m_TargetAssemblyTypeName: LightOFFER, Assembly-CSharp
+        m_MethodName: OFF
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5627,6 +5629,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1.7
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5585273827910465563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5903762950456637570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d735412780e27e468e75d7521075562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5974230956448398062
 GameObject:
   m_ObjectHideFlags: 0
