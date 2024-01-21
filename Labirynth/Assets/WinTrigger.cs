@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackHItChecker : MonoBehaviour
+public class WinTrigger : MonoBehaviour
 {
     [SerializeField] GameObject _labirintPlayer;
-    [SerializeField] GameObject _losePlayer;
-    [SerializeField] GameObject _loseCanv;
+    [SerializeField] GameObject _winPlayer;
+    [SerializeField] GameObject _winCanv;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             _labirintPlayer.SetActive(false);
-            _losePlayer.SetActive(true);
-            _loseCanv.SetActive(true);
+            _winPlayer.SetActive(true);
+            _winCanv.SetActive(true);
             StartCoroutine(GameObject.FindGameObjectsWithTag("SceneLoader")[0].GetComponent<SceneManagerScr>().Fade());
             other.gameObject.GetComponent<PlayerSound>().PlayDeathAudio();
         }
