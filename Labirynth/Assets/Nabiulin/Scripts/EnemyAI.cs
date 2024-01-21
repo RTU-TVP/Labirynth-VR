@@ -10,7 +10,7 @@ public class EnemyAI : MonoBehaviour
     private NavMeshAgent agent;
 
     [SerializeField]
-    private Transform player;
+    public Transform player;
 
     [SerializeField]
     private float lookRadius = 10f;
@@ -68,7 +68,31 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
-        float distance = Vector3.Distance(player.position, transform.position);
+        if (player == null)
+        {
+            currentState = EnemyState.Patroling;
+            chaseTheme.SetActive(false);
+        }
+        else
+        {
+            float distance = Vector3.Distance(player.position, transform.position);
+
+            if (distance <= attackRange)
+            {
+                chaseTheme.SetActive(true);
+                currentState = EnemyState.Attack;
+            }
+            else if (distance <= lookRadius)
+            {
+                chaseTheme.SetActive(true);
+                currentState = EnemyState.Chase;
+            }
+            else
+            {
+                chaseTheme.SetActive(false);
+                currentState = EnemyState.Patroling;
+            }
+        }
 
         if (stunTimer > 0f)
         {
@@ -100,23 +124,6 @@ public class EnemyAI : MonoBehaviour
                 Stun();
                 break;
         }
-
-        if (distance <= attackRange)
-        {
-            chaseTheme.SetActive(true);
-            currentState = EnemyState.Attack;
-        }
-        else if (distance <= lookRadius)
-        {
-            chaseTheme.SetActive(true);
-            currentState = EnemyState.Chase;
-        }
-        else
-        {
-            chaseTheme.SetActive(false);
-            currentState = EnemyState.Patroling;
-        }
-
     }
 
     private void PlayAudio(AudioClip clip)
