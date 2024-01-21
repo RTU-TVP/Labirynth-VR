@@ -27,6 +27,12 @@ public class SceneManagerScr : MonoBehaviour
         else { Destroy(gameObject); }
 
     }
+    public IEnumerator Fade()
+    {
+        _fadeAnimator.SetTrigger("Fadeout");
+        yield return new WaitForSeconds(1f);
+        _fadeAnimator.SetTrigger("Fadein");
+    }
 
     public IEnumerator LoadScene(string name) 
     {
