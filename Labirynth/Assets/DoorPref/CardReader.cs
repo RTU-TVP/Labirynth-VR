@@ -10,6 +10,6 @@ public class CardReader : MonoBehaviour
     {
         if (other.gameObject.tag == "Keycard")
         {
-            print("Start");  StartCoroutine(_door.DoorOpener()); }
+            StartCoroutine(_door.DoorOpener()); }
     }
 }
