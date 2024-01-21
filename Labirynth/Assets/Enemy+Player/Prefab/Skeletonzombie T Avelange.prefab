@@ -393,7 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
   player: {fileID: 0}
-  lookRadius: 20
+  lookRadius: 15
   attackRange: 3
   _animationController: {fileID: 0}
   stunTimer: 0
@@ -404,7 +404,7 @@ MonoBehaviour:
   _roar: {fileID: 2669895322271905026}
   chaseTheme: {fileID: 9074068370143708957}
   currentState: 0
-  patrolTimer: 15
+  patrolTimer: 20
 --- !u!114 &2352883396463703774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -438,10 +438,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.40782547
-  m_Height: 4.5975595
+  m_Radius: 0.2805519
+  m_Height: 3.3648214
   m_Direction: 1
-  m_Center: {x: -0.022922516, y: 1.7987797, z: 0}
+  m_Center: {x: 0.005783081, y: 1.1824107, z: 0}
 --- !u!82 &5176261971086183476
 AudioSource:
   m_ObjectHideFlags: 0
@@ -576,8 +576,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.8616808, y: 2.5803063, z: 1.3738481}
-  m_Center: {x: 0.06915962, y: 1.0132834, z: -0.07202384}
+  m_Size: {x: 0.8616808, y: 1.4983097, z: 0.5519461}
+  m_Center: {x: 0.06915962, y: 0.8277428, z: 0.013333553}
 --- !u!114 &1290524312459584122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -590,3 +590,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cec7dd6e01aff904f81c05d2665394b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _labirintPlayer: {fileID: 0}
+  _losePlayer: {fileID: 0}

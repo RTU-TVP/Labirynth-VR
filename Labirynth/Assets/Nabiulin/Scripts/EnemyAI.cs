@@ -205,7 +205,7 @@ public class EnemyAI : MonoBehaviour
 
     private void FindRandomPatrolPoint()
     {
-        float patrolRadius = 25f;
+        float patrolRadius = 50f;
         Vector3 randomPoint = transform.position + UnityEngine.Random.insideUnitSphere * patrolRadius;
 
         NavMeshHit hit;
