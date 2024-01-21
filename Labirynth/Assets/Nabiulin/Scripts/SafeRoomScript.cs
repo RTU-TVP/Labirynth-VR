@@ -21,6 +21,8 @@ public class SafeRoomScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             _enemyAI.player = null;
+            _ambient.SetActive(false);
+            _roomMusic.SetActive(true);
         }
     }
 
@@ -29,6 +31,8 @@ public class SafeRoomScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             _enemyAI.player = GameObject.FindWithTag("Player").transform;
+            _ambient.SetActive(true);
+            _roomMusic.SetActive(false);
         }
     }
 }
