@@ -11,9 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/RAP/Scenes/Labyrinth.unity
     guid: 060d7dc499e96064b904364d6eb4b4d6
-  - enabled: 1
-    path: Assets/_Finale/Scenes/GameScene.unity
-    guid: 633585e95ef1d554ebb0ce3766b21554
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 4efdb9ab62acc41459775d9747b07d1f, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: f2d161801adac6a45be25d43542aa4cb, type: 2}
