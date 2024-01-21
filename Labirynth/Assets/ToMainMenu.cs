@@ -9,6 +9,6 @@ public class ToMainMenu : MonoBehaviour
     {
         if (Name == "") { Name = "MainMenu"; }
         Time.timeScale = 1.0f;
-        FindAnyObjectByType<SceneManagerScr>().LoadScene(Name);
+        StartCoroutine(FindAnyObjectByType<SceneManagerScr>().LoadScene(Name));
     }
 }
