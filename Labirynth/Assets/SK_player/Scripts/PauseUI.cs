@@ -13,6 +13,6 @@ public class PauseUI : MonoBehaviour
     public void Quit()
     {
         Time.timeScale = 1.0f;
-        //SceneManager.LoadScene("Main Menu");
+        FindObjectOfType<SceneManagerScr>().LoadScene("MainMenu");
     }
 }
