@@ -187,15 +187,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2630148062256768516, guid: 89b066d571376654eb6eae9036159a00, type: 3}
       propertyPath: m_LocalScale.x
-      value: -0.038831275
+      value: 0.03883127
       objectReference: {fileID: 0}
     - target: {fileID: 2630148062256768516, guid: 89b066d571376654eb6eae9036159a00, type: 3}
       propertyPath: m_LocalScale.y
-      value: -0.070589915
+      value: 0.07058991
       objectReference: {fileID: 0}
     - target: {fileID: 2630148062256768516, guid: 89b066d571376654eb6eae9036159a00, type: 3}
       propertyPath: m_LocalScale.z
-      value: -0.0013932193
+      value: 0.001393219
       objectReference: {fileID: 0}
     - target: {fileID: 2630148062256768516, guid: 89b066d571376654eb6eae9036159a00, type: 3}
       propertyPath: m_LocalPosition.x
@@ -237,6 +237,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3407900147139745268, guid: 89b066d571376654eb6eae9036159a00, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3794942363683764936, guid: 89b066d571376654eb6eae9036159a00, type: 3}
       propertyPath: m_UseGravity
       value: 1
@@ -254,6 +258,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 1747c9f03a37664448e3aa7c2e430d1e, type: 2}
     - target: {fileID: 8929644414825922990, guid: 89b066d571376654eb6eae9036159a00, type: 3}
+      propertyPath: m_Colliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8929644414825922990, guid: 89b066d571376654eb6eae9036159a00, type: 3}
+      propertyPath: m_Colliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 6463576177278455035}
+    - target: {fileID: 8929644414825922990, guid: 89b066d571376654eb6eae9036159a00, type: 3}
       propertyPath: m_InteractionLayers.m_Bits
       value: 16
       objectReference: {fileID: 0}
@@ -268,5 +280,10 @@ PrefabInstance:
 --- !u!4 &3275001160329351025 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2630148062256768516, guid: 89b066d571376654eb6eae9036159a00, type: 3}
+  m_PrefabInstance: {fileID: 716931669706369397}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &6463576177278455035 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 5782676655337072014, guid: 89b066d571376654eb6eae9036159a00, type: 3}
   m_PrefabInstance: {fileID: 716931669706369397}
   m_PrefabAsset: {fileID: 0}
