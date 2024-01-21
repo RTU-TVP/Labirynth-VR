@@ -4643,7 +4643,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 8046000518921219216}
-  offset: 1.1176
+  offsetY: 0
+  offsetXZ: 0
 --- !u!1 &3911816244219873855
 GameObject:
   m_ObjectHideFlags: 0
@@ -4896,7 +4897,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 9010465921272957477}
         m_TargetAssemblyTypeName: ToMainMenu, Assembly-CSharp
-        m_MethodName: ReturnToMenu
+        m_MethodName: Load
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4933,7 +4934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f41a83adf28b6694e89ed2ce4d89a812, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
+  Name: MainMenu
 --- !u!1 &4185362019818264401
 GameObject:
   m_ObjectHideFlags: 0
