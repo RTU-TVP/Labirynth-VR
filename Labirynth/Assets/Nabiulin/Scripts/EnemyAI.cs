@@ -10,7 +10,7 @@ public class EnemyAI : MonoBehaviour
     private NavMeshAgent agent;
 
     [SerializeField]
-    private Transform player;
+    public Transform player;
 
     [SerializeField]
     private float lookRadius = 10f;
@@ -68,6 +68,11 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
+        if (player == null)
+        {
+            return;
+        }
+
         float distance = Vector3.Distance(player.position, transform.position);
 
         if (stunTimer > 0f)
