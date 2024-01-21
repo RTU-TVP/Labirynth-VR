@@ -2217,11 +2217,11 @@ GameObject:
   - component: {fileID: 1772568436}
   m_Layer: 0
   m_Name: SceneManager
-  m_TagString: Untagged
+  m_TagString: SceneLoader
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1772568434
 MonoBehaviour:
   m_ObjectHideFlags: 0

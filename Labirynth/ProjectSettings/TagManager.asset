@@ -9,6 +9,7 @@ TagManager:
   - Keycard
   - FlashLight
   - Gun
+  - SceneLoader
   layers:
   - Default
   - TransparentFX
