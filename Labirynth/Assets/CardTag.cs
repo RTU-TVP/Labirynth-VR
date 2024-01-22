@@ -1,20 +1,18 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class MagazineLayer : MonoBehaviour
+public class CardTag : MonoBehaviour
 {
     private IXRSelectInteractable m_gameObject;
-    public void ChangeLayerOff()
+    public void ChangeTagOff()
     {
         m_gameObject = gameObject.GetComponent<XRSocketInteractorByTag>().GetOldestInteractableSelected();
-        m_gameObject.transform.gameObject.GetComponent<LayerChange>().IntLayerOff();
+        m_gameObject.transform.gameObject.GetComponent<TagChange>().TagOff();
     }
-    public void ChangeLayerOn()
+    public void ChangeTagOn()
     {
-        m_gameObject.transform.gameObject.GetComponent<LayerChange>().IntLayerOn();
+        m_gameObject.transform.gameObject.GetComponent<TagChange>().TagOn();
     }
 }
-

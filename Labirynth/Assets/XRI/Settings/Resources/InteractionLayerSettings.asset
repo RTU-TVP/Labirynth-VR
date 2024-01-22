@@ -18,8 +18,8 @@ MonoBehaviour:
   - Gun
   - FlashLight
   - AccessCard
-  - 
-  - 
+  - MagazineInGun
+  - AccessCardInv
   - 
   - 
   - 

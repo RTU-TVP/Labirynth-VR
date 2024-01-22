@@ -13,6 +13,7 @@ TagManager:
   - Door
   - LHand
   - RHand
+  - InvKeycard
   layers:
   - Default
   - TransparentFX

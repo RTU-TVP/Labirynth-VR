@@ -13,7 +13,7 @@ public class EnemyAI : MonoBehaviour
     public Transform player;
 
     [SerializeField]
-    private float lookRadius = 10f;
+    private float lookRadius = 25f;
 
     [SerializeField]
     private float attackRange = 3f;
@@ -55,6 +55,7 @@ public class EnemyAI : MonoBehaviour
 
     void Start()
     {
+        lookRadius = 25f;
         player = GameObject.FindWithTag("Player").transform;
         _audioSource = GetComponent<AudioSource>();
         agent = GetComponent<NavMeshAgent>();
@@ -92,6 +93,15 @@ public class EnemyAI : MonoBehaviour
                 chaseTheme.SetActive(false);
                 currentState = EnemyState.Patroling;
             }
+        }
+
+        if (currentState != EnemyState.Chase)
+        {
+            lookRadius = 25f;
+        }
+        else
+        {
+            lookRadius = 25f * 1.3f;
         }
 
         if (stunTimer > 0f)
@@ -165,7 +175,7 @@ public class EnemyAI : MonoBehaviour
         {
             FindRandomPatrolPoint();
         }
-
+        
         _roar.gameObject.SetActive(false);
 
         FaceToTargetSmooth(agent.velocity.normalized);

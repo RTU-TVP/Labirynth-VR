@@ -168,6 +168,10 @@ PrefabInstance:
       propertyPath: m_text
       value: "\u0412\u044B\u0445\u043E\u0434"
       objectReference: {fileID: 0}
+    - target: {fileID: 7213844143696745411, guid: 2707283dff903fa4bbc306dbd1ff66ab, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9024717126696865994, guid: 2707283dff903fa4bbc306dbd1ff66ab, type: 3}
       propertyPath: m_Name
       value: MainMenuUI Variant
