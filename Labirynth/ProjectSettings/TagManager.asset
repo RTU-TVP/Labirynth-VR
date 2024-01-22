@@ -10,6 +10,9 @@ TagManager:
   - FlashLight
   - Gun
   - SceneLoader
+  - Door
+  - LHand
+  - RHand
   layers:
   - Default
   - TransparentFX

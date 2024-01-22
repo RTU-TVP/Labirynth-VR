@@ -105,7 +105,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1714722866742419803}
   - component: {fileID: 2503317579382368496}
-  - component: {fileID: 1137785926310978526}
   - component: {fileID: 6834026348707127747}
   m_Layer: 0
   m_Name: Magazine_Location
@@ -214,21 +213,6 @@ MonoBehaviour:
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
   _tag: Gun Magazine
---- !u!114 &1137785926310978526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 453895006070111553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3a29fa2109f6d142bca0111a7e839e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _camera: {fileID: 8046000518921219216}
-  XOffset: 0
-  YOffset: 0.5
 --- !u!65 &6834026348707127747
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -583,7 +567,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8061269947483042440}
   - component: {fileID: 1150877896371128521}
-  - component: {fileID: 8454694337213145572}
   - component: {fileID: 2612311032568022474}
   m_Layer: 0
   m_Name: Gun_Location
@@ -601,7 +584,7 @@ Transform:
   m_GameObject: {fileID: 1347387422042420753}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.27070004, y: 0.01699996, z: -0.112999886}
+  m_LocalPosition: {x: 0.27070004, y: 0.01699996, z: 0.046999976}
   m_LocalScale: {x: 0.05, y: 0.050000004, z: 0.05}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -692,21 +675,6 @@ MonoBehaviour:
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
   _tag: Gun
---- !u!114 &8454694337213145572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1347387422042420753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3a29fa2109f6d142bca0111a7e839e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _camera: {fileID: 8046000518921219216}
-  XOffset: -0.15
-  YOffset: 0.5
 --- !u!135 &2612311032568022474
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1025,7 +993,7 @@ GameObject:
   - component: {fileID: 5829495289255818122}
   m_Layer: 8
   m_Name: RightHand Controller
-  m_TagString: Untagged
+  m_TagString: RHand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2902,7 +2870,7 @@ GameObject:
   - component: {fileID: 6730423862930928616}
   m_Layer: 8
   m_Name: LeftHand Controller
-  m_TagString: Untagged
+  m_TagString: LHand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4082,7 +4050,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -13.34, y: 1.78, z: -2.55}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3518525434189946267}
@@ -4151,7 +4119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 8806675839826963797}
-  m_MoveSpeed: 2.5
+  m_MoveSpeed: 3.5
   m_EnableStrafe: 1
   m_EnableFly: 0
   m_UseGravity: 1
@@ -4240,7 +4208,7 @@ MonoBehaviour:
   _heartBeat: {fileID: 9140111127284591386}
   _panicVolume: {fileID: 8467196620011453982}
   inputMove: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  range: 25
+  range: 30
   enemy: {fileID: 0}
 --- !u!82 &1308861404036007479
 AudioSource:
@@ -4643,8 +4611,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 8046000518921219216}
-  offsetY: 0
-  offsetXZ: 0
+  offsetY: 0.75
+  offsetXZ: 0.1
 --- !u!1 &3911816244219873855
 GameObject:
   m_ObjectHideFlags: 0
@@ -5324,7 +5292,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5579676459560020590}
   - component: {fileID: 5439932329850543215}
-  - component: {fileID: 8125211195556897956}
   - component: {fileID: 4890615686741364222}
   m_Layer: 0
   m_Name: Card_Location
@@ -5433,21 +5400,6 @@ MonoBehaviour:
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
   _tag: Keycard
---- !u!114 &8125211195556897956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5304939319991812265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3a29fa2109f6d142bca0111a7e839e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _camera: {fileID: 8046000518921219216}
-  XOffset: -0.15
-  YOffset: 0.5
 --- !u!65 &4890615686741364222
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5543,7 +5495,6 @@ GameObject:
   m_Component:
   - component: {fileID: 600839724826899330}
   - component: {fileID: 9188565539751719094}
-  - component: {fileID: 6684919577497140937}
   - component: {fileID: 6710768384538109208}
   - component: {fileID: 5585273827910465563}
   m_Layer: 0
@@ -5562,7 +5513,7 @@ Transform:
   m_GameObject: {fileID: 5903762950456637570}
   serializedVersion: 2
   m_LocalRotation: {x: 0.9396927, y: -0, z: -0, w: 0.34202018}
-  m_LocalPosition: {x: -0.2650001, y: 0.01699996, z: -0.11299996}
+  m_LocalPosition: {x: -0.265, y: 0.01699996, z: 0.047}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.050000004}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5641,21 +5592,6 @@ MonoBehaviour:
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
   _tag: FlashLight
---- !u!114 &6684919577497140937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5903762950456637570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3a29fa2109f6d142bca0111a7e839e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _camera: {fileID: 8046000518921219216}
-  XOffset: -0.15
-  YOffset: 0.5
 --- !u!135 &6710768384538109208
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5856,7 +5792,6 @@ GameObject:
   m_Component:
   - component: {fileID: 973828301524686052}
   - component: {fileID: 7169123864233773892}
-  - component: {fileID: 3323808172251043384}
   - component: {fileID: 3288030704953943130}
   m_Layer: 0
   m_Name: Magazine_Location (1)
@@ -5965,21 +5900,6 @@ MonoBehaviour:
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
   _tag: Gun Magazine
---- !u!114 &3323808172251043384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6493974195931093265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3a29fa2109f6d142bca0111a7e839e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _camera: {fileID: 8046000518921219216}
-  XOffset: 0.15
-  YOffset: 0.5
 --- !u!65 &3288030704953943130
 BoxCollider:
   m_ObjectHideFlags: 0

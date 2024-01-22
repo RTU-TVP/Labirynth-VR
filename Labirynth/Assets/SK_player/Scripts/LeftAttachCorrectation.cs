@@ -13,7 +13,11 @@ public class LeftAttachCorrectation : MonoBehaviour
     [SerializeField] private Transform _handR;
     [SerializeField] private Transform _handL;
 
-
+    private void Start()
+    {
+        _handL = GameObject.FindGameObjectWithTag("LHand").transform;
+        _handR = GameObject.FindGameObjectWithTag("RHand").transform;
+    }
     private void Update() 
     {
         if (Vector3.Distance(_attachPointL.position, _handL.position) > Vector3.Distance(_attachPointR.position, _handR.position))

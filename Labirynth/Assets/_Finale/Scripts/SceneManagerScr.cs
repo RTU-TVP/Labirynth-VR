@@ -25,7 +25,13 @@ public class SceneManagerScr : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
         else { Destroy(gameObject); }
+        SceneManager.sceneLoaded += FadeIn;
+        _fadeAnimator = GetComponent<Animator>();
+    }
 
+    void FadeIn(Scene scene, LoadSceneMode mode)
+    {
+        _fadeAnimator.SetTrigger("Fadein");
     }
     public IEnumerator Fade()
     {
@@ -33,14 +39,14 @@ public class SceneManagerScr : MonoBehaviour
         yield return new WaitForSeconds(1f);
         _fadeAnimator.SetTrigger("Fadein");
     }
-
+    
     public IEnumerator LoadScene(string name) 
     {
         _loadComplete = false;
         _fadeAnimator.SetTrigger("Fadeout");
         yield return new WaitForSeconds(1f);
         LoadSceneAsyn(name);
-        while (!_loadComplete) { yield return null; }
+        while (!_loadComplete) { yield return new WaitForEndOfFrame(); }
         yield return new WaitForSeconds(0.1f);
         _fadeAnimator.SetTrigger("Fadein");
     }
