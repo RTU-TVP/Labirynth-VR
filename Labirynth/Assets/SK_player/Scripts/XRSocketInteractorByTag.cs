@@ -6,11 +6,14 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class XRSocketInteractorByTag : XRSocketInteractor
 {
-    [SerializeField] private string _tag;
+    [SerializeField] private string[] _tag;
 
     [System.Obsolete]
     public override bool CanSelect(XRBaseInteractable interactable)
     {
-        return base.CanSelect(interactable) && interactable.tag == _tag;
+        foreach (var tag in _tag) {
+            if (interactable.tag == tag) return base.CanSelect(interactable);
+        }
+        return false;
     }
 }

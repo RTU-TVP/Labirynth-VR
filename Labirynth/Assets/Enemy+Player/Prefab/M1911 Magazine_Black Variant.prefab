@@ -9,6 +9,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6667909624984210994, guid: e7801e0ecbc7a7a429f513a17cca276b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6667909624984210994, guid: e7801e0ecbc7a7a429f513a17cca276b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6667909624984210994, guid: e7801e0ecbc7a7a429f513a17cca276b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6667909624984210994, guid: e7801e0ecbc7a7a429f513a17cca276b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.215
       objectReference: {fileID: 0}
@@ -56,6 +68,14 @@ PrefabInstance:
       propertyPath: m_InteractionLayers.m_Bits
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8162655188706031009, guid: e7801e0ecbc7a7a429f513a17cca276b, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162655188706031009, guid: e7801e0ecbc7a7a429f513a17cca276b, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8282701519854821119, guid: e7801e0ecbc7a7a429f513a17cca276b, type: 3}
       propertyPath: m_Name
       value: M1911 Magazine_Black Variant
@@ -63,5 +83,27 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8282701519854821119, guid: e7801e0ecbc7a7a429f513a17cca276b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6291277678598243786}
   m_SourcePrefab: {fileID: 100100000, guid: e7801e0ecbc7a7a429f513a17cca276b, type: 3}
+--- !u!1 &3554166462471068067 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8282701519854821119, guid: e7801e0ecbc7a7a429f513a17cca276b, type: 3}
+  m_PrefabInstance: {fileID: 4873174859078240092}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6291277678598243786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3554166462471068067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1250a6da1bec8a442b8eccee90ccccaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _off: MagazineInGun
+  _on: Magazines
