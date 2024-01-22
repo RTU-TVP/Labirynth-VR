@@ -12,9 +12,14 @@ public class WinTrigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            _labirintPlayer.transform.position = vector;
             _winCanv.SetActive(true);
             StartCoroutine(GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneManagerScr>().Fade());
+            StartCoroutine(PlayerChangePos());
         }
+    }
+    private IEnumerator PlayerChangePos()
+    {
+        yield return new WaitForSeconds(1);
+        _labirintPlayer.transform.position = vector;
     }
 }
