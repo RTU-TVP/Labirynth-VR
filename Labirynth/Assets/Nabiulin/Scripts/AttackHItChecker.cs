@@ -5,16 +5,15 @@ using UnityEngine;
 public class AttackHItChecker : MonoBehaviour
 {
     [SerializeField] GameObject _labirintPlayer;
-    [SerializeField] GameObject _losePlayer;
+    [SerializeField] Vector3 pos;
     [SerializeField] GameObject _loseCanv;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            _labirintPlayer.SetActive(false);
-            _losePlayer.SetActive(true);
+            _labirintPlayer.transform.position = pos;
             _loseCanv.SetActive(true);
-            StartCoroutine(GameObject.FindGameObjectsWithTag("SceneLoader")[0].GetComponent<SceneManagerScr>().Fade());
+            StartCoroutine(GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneManagerScr>().Fade());
             other.gameObject.GetComponent<PlayerSound>().PlayDeathAudio();
         }
     }

@@ -136,6 +136,18 @@ PrefabInstance:
       propertyPath: m_Deactivated.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2755877938168396542, guid: e469dec7f8f29414e9996691d9bf8a5a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.876424
+      objectReference: {fileID: 0}
+    - target: {fileID: 2755877938168396542, guid: e469dec7f8f29414e9996691d9bf8a5a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.93911624
+      objectReference: {fileID: 0}
+    - target: {fileID: 2755877938168396542, guid: e469dec7f8f29414e9996691d9bf8a5a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9528302
+      objectReference: {fileID: 0}
     - target: {fileID: 5477155214715008921, guid: e469dec7f8f29414e9996691d9bf8a5a, type: 3}
       propertyPath: m_Layer
       value: 6

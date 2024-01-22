@@ -92,10 +92,7 @@ public class PlayerSound : MonoBehaviour
 
     public void PlayDeathAudio()
     {
-        if (!_source.isPlaying)
-        {
             _source.PlayOneShot(_death);
-        }
     }
 
     private void OnDrawGizmos()

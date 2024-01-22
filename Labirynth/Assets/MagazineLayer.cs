@@ -7,13 +7,13 @@ public class MagazineLayer : MonoBehaviour
 {
     public void ChangeLayerOff()
     {
-        var x = gameObject.GetComponent<XRSocketInteractorByTag>().GetOldestInteractableSelected();
-        x.transform.gameObject.GetComponent<Magazine>().IntLayerOff();
+       /* var x = gameObject.GetComponent<XRSocketInteractorByTag>().GetOldestInteractableSelected();
+        x.transform.gameObject.GetComponent<Magazine>().IntLayerOff();*/
     }
     public void ChangeLayerOn()
     {
-        var x = gameObject.GetComponent<XRSocketInteractorByTag>().GetOldestInteractableSelected();
-        x.transform.gameObject.GetComponent<Magazine>().IntLayerOn();
+        /*var x = gameObject.GetComponent<XRSocketInteractorByTag>().GetOldestInteractableSelected();
+        x.transform.gameObject.GetComponent<Magazine>().IntLayerOn();*/
     }
 }
 
