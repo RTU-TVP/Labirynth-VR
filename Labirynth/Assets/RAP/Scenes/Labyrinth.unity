@@ -24797,8 +24797,8 @@ LineRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396703386}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 0
@@ -24853,8 +24853,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.020224914, g: 0.7995202, b: 1, a: 1}
-      key1: {r: 0.9823529, g: 0.9963891, b: 1, a: 1}
+      key0: {r: 0, g: 0.7953818, b: 1, a: 1}
+      key1: {r: 0, g: 0.7953818, b: 1, a: 1}
       key2: {r: 0.9823529, g: 0.9963891, b: 1, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -24886,7 +24886,7 @@ LineRenderer:
     alignment: 0
     textureMode: 0
     textureScale: {x: 1, y: 1}
-    shadowBias: 0.5
+    shadowBias: 0
     generateLightingData: 0
   m_MaskInteraction: 0
   m_UseWorldSpace: 1
@@ -24899,15 +24899,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396703386}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78937090054a4a8408b678a9ddd814c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   finishTag: Finish
   keycardTag: Keycard
-  target: {fileID: 0}
-  _source: {fileID: 0}
+  target: {fileID: 789528153}
+  _source: {fileID: 396703394}
   _locatorOnClip: {fileID: 8300000, guid: de3ba5e594b43f04b9a36450c183d0e1, type: 3}
   _locatorErrorClip: {fileID: 8300000, guid: 53d0fac71389cd448a9d21b4d828c9ea, type: 3}
 --- !u!1 &396703389 stripped
@@ -24929,6 +24929,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InputLocator: {fileID: 8707143668553999632, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   Walk: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!82 &396703394 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1308861404036007479, guid: 1013dff0ab41256499502a7c1856c0b3, type: 3}
+  m_PrefabInstance: {fileID: 396703384}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &399275306
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54429,6 +54434,11 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 0}
   m_BuildHeightMesh: 0
+--- !u!4 &789528153 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3275001160329351025, guid: 894466b9c85065042a804d7f47c63cd3, type: 3}
+  m_PrefabInstance: {fileID: 363380438}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &790132948
 GameObject:
   m_ObjectHideFlags: 0
