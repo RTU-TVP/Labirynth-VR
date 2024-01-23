@@ -24763,7 +24763,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6730423862930928616, guid: 1013dff0ab41256499502a7c1856c0b3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -24773,6 +24774,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3614376294437500036, guid: 1013dff0ab41256499502a7c1856c0b3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 396703387}
+    - targetCorrespondingSourceObject: {fileID: 2420559302957623793, guid: 1013dff0ab41256499502a7c1856c0b3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 396703390}
   m_SourcePrefab: {fileID: 100100000, guid: 1013dff0ab41256499502a7c1856c0b3, type: 3}
 --- !u!4 &396703385 stripped
 Transform:
@@ -24906,6 +24910,25 @@ MonoBehaviour:
   _source: {fileID: 0}
   _locatorOnClip: {fileID: 8300000, guid: de3ba5e594b43f04b9a36450c183d0e1, type: 3}
   _locatorErrorClip: {fileID: 8300000, guid: 53d0fac71389cd448a9d21b4d828c9ea, type: 3}
+--- !u!1 &396703389 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2420559302957623793, guid: 1013dff0ab41256499502a7c1856c0b3, type: 3}
+  m_PrefabInstance: {fileID: 396703384}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &396703390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396703389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cd913429ef0dd2438b203e05c9107a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InputLocator: {fileID: 8707143668553999632, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  Walk: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1001 &399275306
 PrefabInstance:
   m_ObjectHideFlags: 0
