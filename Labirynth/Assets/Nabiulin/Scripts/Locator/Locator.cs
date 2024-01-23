@@ -59,14 +59,8 @@ public class Locator : MonoBehaviour
 
     private void OnDisable()
     {
-        if (path.corners.Length <= 0)
-        {
-            _source.PlayOneShot(_locatorErrorClip);
-        }
-        else
-        {
-            _source.PlayOneShot(_locatorOnClip);
-        }
+        _source.PlayOneShot(_locatorErrorClip);
+
         LineRenderer lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.enabled = false;
     }
