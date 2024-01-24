@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class SceneManagerScr : MonoBehaviour
 {
@@ -20,11 +21,11 @@ public class SceneManagerScr : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
         else { Destroy(gameObject); }
-        SceneManager.sceneLoaded += FindCanv;
+        SceneManager.sceneLoaded += scLoad;
 
     }
 
-    void FindCanv(Scene scene, LoadSceneMode mode)
+    void scLoad(Scene scene, LoadSceneMode mode)
     {
         _fadeAnimator = GameObject.FindGameObjectWithTag("FadeAnimator").GetComponent<Animator>();
     }

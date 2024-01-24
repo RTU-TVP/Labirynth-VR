@@ -6,4 +6,5 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Magazine : MonoBehaviour
 {
     public int bulletsCount;
+    public bool autoUnload=false;
 }
