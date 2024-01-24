@@ -2622,6 +2622,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Unload",
+                    "type": "Value",
+                    "id": "268f8f6c-7260-4f69-8cde-79766183a27f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -2644,6 +2653,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Locator",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5fa02330-d91e-4b61-885c-a2d868227944",
+                    "path": "<XRController>{LeftHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Unload",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
