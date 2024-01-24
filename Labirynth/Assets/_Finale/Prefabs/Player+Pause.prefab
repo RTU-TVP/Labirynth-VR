@@ -3113,6 +3113,7 @@ GameObject:
   - component: {fileID: 2114842113364916292}
   - component: {fileID: 2657033564545453303}
   - component: {fileID: 6730423862930928616}
+  - component: {fileID: 7190542453828341628}
   m_Layer: 8
   m_Name: LeftHand Controller
   m_TagString: LHand
@@ -3488,6 +3489,20 @@ MonoBehaviour:
   PauseUI: {fileID: 3267339399361911830}
   _camera: {fileID: 8046000518921219216}
   InputPause: {fileID: 8706663888535693904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!114 &7190542453828341628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2420559302957623793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06a5c0a5d9172f64ca1e3284a43b328d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _unloadBtn: {fileID: -6998018435906358294, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  _magazine: {fileID: 0}
 --- !u!1 &2471371564858383915
 GameObject:
   m_ObjectHideFlags: 0
@@ -4362,6 +4377,7 @@ GameObject:
   - component: {fileID: 1863375162289848706}
   - component: {fileID: 2733308843302448093}
   - component: {fileID: 7940770337374115626}
+  - component: {fileID: 8010660809603032617}
   m_Layer: 3
   m_Name: Player+Pause
   m_TagString: Player
@@ -4727,6 +4743,44 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -8525429354371678379, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!114 &8010660809603032617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3614376294437500036}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919e39492806b334982b6b84c90dd927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 0}
+  m_TurnSpeed: 90
+  m_LeftHandTurnAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Left Hand Turn
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: 201fa359-74c1-467f-abf9-26f321f4a29e
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  m_RightHandTurnAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Right Hand Turn
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: 4a9368d3-0fc4-4212-a442-fffe0fcdff88
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -6493913391331992944, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1 &3696414849640722472
 GameObject:
   m_ObjectHideFlags: 0

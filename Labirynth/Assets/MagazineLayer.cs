@@ -14,7 +14,12 @@ public class MagazineLayer : MonoBehaviour
     }
     public void ChangeLayerOn()
     {
-        m_gameObject.transform.gameObject.GetComponent<LayerChange>().IntLayerOn();
+        print("1");
+        if (!m_gameObject.transform.gameObject.GetComponent<Magazine>().autoUnload)
+        {
+            print("2");
+            m_gameObject.transform.gameObject.GetComponent<LayerChange>().IntLayerOn();
+        }
     }
 }
 

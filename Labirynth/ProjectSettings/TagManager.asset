@@ -16,6 +16,7 @@ TagManager:
   - InvKeycard
   - CanvLoad
   - FadeAnimator
+  - Gun MagazineA
   layers:
   - Default
   - TransparentFX
