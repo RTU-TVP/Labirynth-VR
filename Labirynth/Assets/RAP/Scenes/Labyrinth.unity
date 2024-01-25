@@ -21348,6 +21348,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeletonzombie T Avelange
       objectReference: {fileID: 0}
+    - target: {fileID: 5579073506713802749, guid: c41d4ab874acd314b8ce272bb6a6fb92, type: 3}
+      propertyPath: m_Size.y
+      value: 1.6940472
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579073506713802749, guid: c41d4ab874acd314b8ce272bb6a6fb92, type: 3}
+      propertyPath: m_Size.z
+      value: 0.76476455
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579073506713802749, guid: c41d4ab874acd314b8ce272bb6a6fb92, type: 3}
+      propertyPath: m_Center.x
+      value: 0.06915962
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579073506713802749, guid: c41d4ab874acd314b8ce272bb6a6fb92, type: 3}
+      propertyPath: m_Center.y
+      value: 0.9256116
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579073506713802749, guid: c41d4ab874acd314b8ce272bb6a6fb92, type: 3}
+      propertyPath: m_Center.z
+      value: -0.0070931097
+      objectReference: {fileID: 0}
     - target: {fileID: 5629423033595266475, guid: c41d4ab874acd314b8ce272bb6a6fb92, type: 3}
       propertyPath: m_LocalPosition.x
       value: -43.51
