@@ -27,7 +27,7 @@ public class Locator : MonoBehaviour
     {
         DrawPath();
 
-        if (target != null && target.CompareTag(keycardTag) && Vector3.Distance(transform.position, target.position) < 1.0f)
+        if (target != null && target.CompareTag(keycardTag) && Vector3.Distance(transform.position, target.position) < 3.0f)
         {
             target = FindTargetWithTag(finishTag);
             DrawPath();
