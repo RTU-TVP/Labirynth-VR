@@ -21401,6 +21401,10 @@ PrefabInstance:
       value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6388182768488779624, guid: c41d4ab874acd314b8ce272bb6a6fb92, type: 3}
+      propertyPath: attackRange
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6388182768488779624, guid: c41d4ab874acd314b8ce272bb6a6fb92, type: 3}
       propertyPath: _animationController
       value: 
       objectReference: {fileID: 1383534902}
@@ -30952,6 +30956,10 @@ PrefabInstance:
     - target: {fileID: 7942752813653064132, guid: 30023cc824132bd4bb6a2cd831be15ba, type: 3}
       propertyPath: m_Name
       value: Wall Light (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942752813653064132, guid: 30023cc824132bd4bb6a2cd831be15ba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -49629,6 +49637,10 @@ PrefabInstance:
     - target: {fileID: 7942752813653064132, guid: 30023cc824132bd4bb6a2cd831be15ba, type: 3}
       propertyPath: m_Name
       value: Wall Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942752813653064132, guid: 30023cc824132bd4bb6a2cd831be15ba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
