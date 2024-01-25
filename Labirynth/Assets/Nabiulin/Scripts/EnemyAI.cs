@@ -191,7 +191,7 @@ public class EnemyAI : MonoBehaviour
         agent.SetDestination(player.position);
         _animationController.RunAnim();
 
-        agent.speed = 6;
+        agent.speed = 6.25f;
 
         FaceToTargetSmooth(agent.velocity.normalized);
 
