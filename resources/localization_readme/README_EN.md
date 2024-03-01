@@ -1,6 +1,6 @@
 # VR Labyrinth
 
-[Рус](//ссылка на Rus) | Eng
+[Рус](../../README.md) | Eng
 
 ## Project description
 
@@ -15,35 +15,27 @@ During the game, the user has access to several items located within the labyrin
 * Pistol:
 	Player can shoot the pistol to momentarily stop the monster. To shoot, the player needs to insert a magazine into the pistol grip.
 
-* Magazine: 
+* Magazine:
 	Allows the player to shoot when inserted into the pistol. Contains 6 rounds.
 
 * Flashlight: 
 	Allows the player to illuminate parts of the labyrinth.
 
-* Keycard: 
+* Keycard:
 	Allows the player to open doors to safe zones.
 
 The game is designed for VR. 
 
 Control is achieved using VR controllers:
 
-	* Left stick - movement;
-	* Right stick - rotation;
-	* X - use the exit locator (requires remaining in place);
-	* Y - quick magazine release;
-	* A - pause;
-	* Left/right trigger - use item in left/right hand;
-	* Left/right grip - hold item in left/right hand;
+* Left stick - movement;
+* Right stick - rotation;
+* X - use the exit locator (requires remaining in place);
+* Y - quick magazine release;
+* A - pause;
+* Left/right trigger - use item in left/right hand;
+* Left/right grip - hold item in left/right hand;
 
-## Технологии
-
-* **Движок:** Unity 2023.2.3f1
-* **Язык программирования:** C#
-* **Система контроля версий:** Git
-* **Дизайн монстра и окружения:** Mixamo, Blender
-
-## Скриншоты
 
 ## Technologies:
 
@@ -57,7 +49,7 @@ Control is achieved using VR controllers:
 
 ### Gameplay
 
-![Gameplay](../../resources/screenshots/screenshot_1.png)
-![Gameplay](../../resources/screenshots/screenshot_2.png)
-![Gameplay](../../resources/screenshots/screenshot_3.png)
-![Gameplay](../../resources/screenshots/screenshot_4.png)
+![Gameplay](../../resources/screenshots/screenshot_1.jpg)
+![Gameplay](../../resources/screenshots/screenshot_2.jpg)
+![Gameplay](../../resources/screenshots/screenshot_3.jpg)
+![Gameplay](../../resources/screenshots/screenshot_4.jpg)
