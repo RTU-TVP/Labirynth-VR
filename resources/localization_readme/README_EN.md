@@ -28,13 +28,13 @@ The game is designed for VR.
 
 Control is achieved using VR controllers:
 
-	* Left stick - movement
-	* Right stick - rotation
-	* X - use the exit locator (requires remaining in place)
-	* Y - quick magazine release
-	* A - pause
-	* Left/right trigger - use item in left/right hand
-	* Left/right grip - hold item in left/right hand
+	* Left stick - movement;
+	* Right stick - rotation;
+	* X - use the exit locator (requires remaining in place);
+	* Y - quick magazine release;
+	* A - pause;
+	* Left/right trigger - use item in left/right hand;
+	* Left/right grip - hold item in left/right hand;
 
 ## Технологии
 
