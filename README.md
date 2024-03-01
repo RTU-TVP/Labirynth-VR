@@ -1,4 +1,4 @@
-# Путешествие по Санкт-Петербургу
+# VR Лабиринт
 
 Рус | [Eng](resources/localization_readme/README_ENG.md)
 
