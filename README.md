@@ -1,6 +1,6 @@
 # VR Лабиринт
 
-Рус | [Eng](resources/localization_readme/README_ENG.md)
+Рус | [Eng](resources/localization_readme/README_EN.md)
 
 ## Описание проекта
 
